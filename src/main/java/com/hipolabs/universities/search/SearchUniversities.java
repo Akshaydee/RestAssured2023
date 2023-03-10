@@ -16,7 +16,7 @@ public class SearchUniversities {
 	{
 		return requestSearchUniversities(name, country, Method.GET, 200);
 	}
-/*
+
 	public static Response requestSearchUniversities(String name, String country, Method method, int expectedStatus) {
 		RequestSpecification reqSpec = given()
 				.baseUri(baseUrl)
@@ -35,9 +35,8 @@ public class SearchUniversities {
 		return reqSpec.request(method, SEARCH_ENDPOINT)
 				.then()
 				.assertThat().statusCode(expectedStatus)
-				.log().status()
-				.log().body(true)
+				//.log().status()
+				//.log().body(true)
 				.extract().response();
 	}
-*/
 }
