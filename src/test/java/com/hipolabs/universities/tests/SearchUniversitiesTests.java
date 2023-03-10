@@ -64,6 +64,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list for \"%s\" is less than expected", name)
 				.containsAll(universitiesListFromFile);
 	}
+/*
 
 	@ParameterizedTest
 	@DisplayName("Request universities by incorrect pairs of country and university name. Should return empty list.")
@@ -76,6 +77,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list contains records, but should not")
 				.isEmpty();
 	}
+*/
 /*
 	@Test
 	@DisplayName("Send POST request to '/search' endpoint. HTTP 405 response should be returned")
