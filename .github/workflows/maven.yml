@@ -29,3 +29,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Analyze with Sonarqube
+      run: mvn clean verify sonar:sonar   -Dsonar.projectKey=RestAssured2023   -Dsonar.host.url=http://10.24.42.90:9000   -Dsonar.login=sqp_214bf23ffe778e99632b35d10a4f32f3a93abda4
+      env:
+          GITHUB_TOKEN: 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  # Needed to get PR information, if any
+          SONAR_PROJECTKEY: RestAssured2023
+          SONAR_TOKEN: sqp_214bf23ffe778e99632b35d10a4f32f3a93abda4
