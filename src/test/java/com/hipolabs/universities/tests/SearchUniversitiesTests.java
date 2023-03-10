@@ -33,7 +33,7 @@ public class SearchUniversitiesTests {
 				.containsAll(universitiesListFromFile);
 	}
 
-/*
+
 	@ParameterizedTest
 	@DisplayName("Request universities by university name parameter only. Parameter's case should be ignored.")
 	@ValueSource(strings = {"Kaunas Medical Academy", "KAUNAS MEDICAL ACADEMY"})
@@ -51,8 +51,7 @@ public class SearchUniversitiesTests {
 				.as("Actual university record does not contain \"%s\"", name)
 				.isEqualToIgnoringCase(name);
 	}
-*/
-/*
+
 	@ParameterizedTest
 	@DisplayName("Request universities by partial university name parameter only. Parameter's case should be ignored.")
 	@ValueSource(strings = {"Kaunas", "KAUNAS"})
@@ -62,12 +61,11 @@ public class SearchUniversitiesTests {
 		List<String> universitiesListFromFile = JsonUtils
 				.getDataByPath("world_universities_and_domains.json", String.format("$[?(@.name =~ /.*%s.*/i)]", name));
 
-		//Assertions.assertThat(actualUniversitiesList)
-		//		.as("Actual universities list for \"%s\" is less than expected", name)
-		//		.containsAll(universitiesListFromFile);
+		Assertions.assertThat(actualUniversitiesList)
+				.as("Actual universities list for \"%s\" is less than expected", name)
+				.containsAll(universitiesListFromFile);
 	}
-*/
-/*
+
 
 	@ParameterizedTest
 	@DisplayName("Request universities by incorrect pairs of country and university name. Should return empty list.")
@@ -80,8 +78,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list contains records, but should not")
 				.isEmpty();
 	}
-*/
-/*
+
 	@Test
 	@DisplayName("Send POST request to '/search' endpoint. HTTP 405 response should be returned")
 	public void negativeUniversitiesSearchByNameAndCountryTest() {
@@ -93,5 +90,4 @@ public class SearchUniversitiesTests {
 				.as("Unexpected response code")
 				.contains("The method is not allowed for the requested URL");
 	}
-*/
 }
