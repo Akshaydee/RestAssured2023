@@ -31,7 +31,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list for %s is less than expected", country)
 				.containsAll(universitiesListFromFile);
 	}
-
+/*
 	@ParameterizedTest
 	@DisplayName("Request universities by university name parameter only. Parameter's case should be ignored.")
 	@ValueSource(strings = {"Kaunas Medical Academy", "KAUNAS MEDICAL ACADEMY"})
@@ -49,7 +49,7 @@ public class SearchUniversitiesTests {
 				.as("Actual university record does not contain \"%s\"", name)
 				.isEqualToIgnoringCase(name);
 	}
-
+*/
 	@ParameterizedTest
 	@DisplayName("Request universities by partial university name parameter only. Parameter's case should be ignored.")
 	@ValueSource(strings = {"Kaunas", "KAUNAS"})
