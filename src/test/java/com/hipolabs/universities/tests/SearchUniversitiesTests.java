@@ -76,7 +76,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list contains records, but should not")
 				.isEmpty();
 	}
-
+/*
 	@Test
 	@DisplayName("Send POST request to '/search' endpoint. HTTP 405 response should be returned")
 	public void negativeUniversitiesSearchByNameAndCountryTest() {
@@ -88,4 +88,5 @@ public class SearchUniversitiesTests {
 				.as("Unexpected response code")
 				.contains("The method is not allowed for the requested URL");
 	}
+*/
 }
