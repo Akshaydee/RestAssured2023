@@ -49,7 +49,7 @@ public class SearchUniversitiesTests {
 				.as("Actual university record does not contain \"%s\"", name)
 				.isEqualToIgnoringCase(name);
 	}
-
+*/
 
 	@ParameterizedTest
 	@DisplayName("Request universities by partial university name parameter only. Parameter's case should be ignored.")
@@ -64,7 +64,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list for \"%s\" is less than expected", name)
 				.containsAll(universitiesListFromFile);
 	}
-*/
+
 	@ParameterizedTest
 	@DisplayName("Request universities by incorrect pairs of country and university name. Should return empty list.")
 	@CsvSource({"Kaunas Medical Academy, Latvia", "Kaunas Medical Academy, Lith", "Fantasy academy, Lithuania"})
