@@ -22,12 +22,11 @@ public class SearchUniversities {
 				.log().method()
 				.log().uri()
 				.log().ifValidationFails(LogDetail.ALL);
-/*
+
 		if (name != null) 
 		{
 			reqSpec = reqSpec.param("name", name);
 		}
-*/
 		if (country != null) {
 			reqSpec = reqSpec.param("country", country);
 		}
