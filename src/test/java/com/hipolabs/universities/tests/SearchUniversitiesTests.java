@@ -18,7 +18,7 @@ import java.util.List;
 import static io.restassured.path.json.JsonPath.from;
 
 public class SearchUniversitiesTests {
-/*	
+
 	@ParameterizedTest
 	@DisplayName("Request universities search by country name parameter only. Parameter's case should be ignored.")
 	@ValueSource(strings = {"Lithuania", "LITHUANIA"})
@@ -32,7 +32,7 @@ public class SearchUniversitiesTests {
 				.as("Actual universities list for %s is less than expected", country)
 				.containsAll(universitiesListFromFile);
 	}
-*/
+
 /*
 	@ParameterizedTest
 	@DisplayName("Request universities by university name parameter only. Parameter's case should be ignored.")
@@ -62,9 +62,9 @@ public class SearchUniversitiesTests {
 		List<String> universitiesListFromFile = JsonUtils
 				.getDataByPath("world_universities_and_domains.json", String.format("$[?(@.name =~ /.*%s.*/i)]", name));
 
-		Assertions.assertThat(actualUniversitiesList)
-				.as("Actual universities list for \"%s\" is less than expected", name)
-				.containsAll(universitiesListFromFile);
+		//Assertions.assertThat(actualUniversitiesList)
+		//		.as("Actual universities list for \"%s\" is less than expected", name)
+		//		.containsAll(universitiesListFromFile);
 	}
 */
 /*
