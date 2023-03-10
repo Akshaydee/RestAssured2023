@@ -15,7 +15,7 @@ public class PropertiesReader
 		} catch (IOException e) 
 		{
 			throw new RuntimeException(e);
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return appProps;
 	}
