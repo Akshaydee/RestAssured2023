@@ -12,10 +12,11 @@ public class SearchUniversities {
 	private static final String baseUrl = PropertiesReader.getProperties().getProperty("base.url");
 	private static final String SEARCH_ENDPOINT = "/search";
 
-	public static Response requestSearchUniversities(String name, String country) {
+	public static Response requestSearchUniversities(String name, String country) 
+	{
 		return requestSearchUniversities(name, country, Method.GET, 200);
 	}
-
+/*
 	public static Response requestSearchUniversities(String name, String country, Method method, int expectedStatus) {
 		RequestSpecification reqSpec = given()
 				.baseUri(baseUrl)
@@ -38,4 +39,5 @@ public class SearchUniversities {
 				.log().body(true)
 				.extract().response();
 	}
+*/
 }
