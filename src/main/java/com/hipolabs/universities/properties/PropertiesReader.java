@@ -14,8 +14,8 @@ public class PropertiesReader
 			appProps.load(appPropsStream);
 		} catch (IOException e) 
 		{
-			throw new RuntimeException(e.printStackTrace());
-			//e.printStackTrace();
+			//throw new RuntimeException(e);
+			e.printStackTrace();
 		}
 		return appProps;
 	}
