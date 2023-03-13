@@ -10,8 +10,8 @@ public class PropertiesReader {
 		try {
 			appProps.load(appPropsStream);
 		} catch (IOException e) {
-			throw new RuntimeException(e);
-			//e.printStackTrace();
+			//throw new RuntimeException(e);
+			e.printStackTrace();
 		}
 		return appProps;
 	}
