@@ -34,9 +34,9 @@ public class SearchUniversities {
 
 		return reqSpec.request(method, SEARCH_ENDPOINT)
 				.then()
-				.assertThat().statusCode(expectedStatus);
-				//.log().status()
-				//.log().body(true)
-				//.extract().response();
+				.assertThat().statusCode(expectedStatus)
+				.log().status()
+				.log().body(true)
+				.extract().response();
 	}
 }
